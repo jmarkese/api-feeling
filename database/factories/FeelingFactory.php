@@ -27,6 +27,7 @@ class FeelingFactory extends Factory
         return [
             'rating' => $this->faker->numberBetween(1, 5),
             'comment' => $this->faker->realText($chars, $indexSize = 2),
+            'user_id' => $this->faker->numberBetween(1, 10),
             'created_at' => $date,
             'updated_at' => $date,
         ];

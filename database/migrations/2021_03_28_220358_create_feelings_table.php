@@ -16,7 +16,7 @@ class CreateFeelingsTable extends Migration
         Schema::create('feelings', function (Blueprint $table) {
             $table->id();
             $table->unsignedTinyInteger("rating");
-            $table->string("comment");
+            $table->text("comment");
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
